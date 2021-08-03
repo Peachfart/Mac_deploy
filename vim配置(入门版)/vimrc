@@ -1,0 +1,52 @@
+"显示行号
+set number
+"语法高亮
+syntax on
+"底部显示
+set showmode
+"支持鼠标
+set mouse=a
+"使用utf-8编码
+set encoding=utf-8
+"启用256色
+set t_Co=256
+"文件类型检查
+filetype indent on
+"自动缩进
+set autoindent
+"tab
+set tabstop=2
+set expandtab
+set softtabstop=2
+"设置行宽
+set textwidth=80
+"自动折行
+set wrap
+"显示状态栏
+set laststatus=2
+"显示光标所在位置
+set ruler
+"高亮括号
+set showmatch
+"高亮匹配结果
+set hlsearch
+"跳转匹配结果
+set incsearch
+"搜索忽略大小写
+set ignorecase
+"英语单词拼写检查
+set spell spelllang=en_us
+"保留撤销历史
+set undofile
+"出错时不要发出声音
+"set noerrorbells
+set vb t_vb=
+"词内不折行
+set linebreak
+"记住历史操作
+set history=1000
+"文件监视
+set autoread
+"命令模式tab补全
+set wildmenu
+set wildmode=longest:list,full
