@@ -38,8 +38,11 @@ set ignorecase
 set spell spelllang=en_us
 "保留撤销历史
 set undofile
-"出错时不要发出声音
-"set noerrorbells
+"历史文件路径
+set backupdir=~/.vim/.backup//  
+set directory=~/.vim/.swp//
+set undodir=~/.vim/.undo// 
+"出错时不要发出声音和闪烁
 set vb t_vb=
 "词内不折行
 set linebreak
