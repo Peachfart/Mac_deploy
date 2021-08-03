@@ -1,0 +1,14 @@
+export CLICOLOR=1
+export LSCOLORS=ExGxFxdaCxDaDahbadeche
+
+alias ll="ls -al"
+alias macOS="screenfetch"
+alias brew-uuc="brew update && brew upgrade && brew cleanup"
+alias brew-delete="rm ~/Library/Caches/Homebrew/downloads/*"
+
+#python
+alias python="/usr/local/bin/python3"
+#pip
+alias pip="/usr/local/bin/pip3"
+#jupyter
+alias jupyter_notebook="jupyter notebook"
