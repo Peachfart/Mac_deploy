@@ -7,12 +7,6 @@ mkdir Project
 cd Project
 ```
 
-#### 将目录变成Git可以管理的仓库(初始化)
-
-```shell
-git init
-```
-
 #### 从远程拉取仓库到本地(以GitHub为例)
 
 ```shell
