@@ -1,5 +1,7 @@
 export CLICOLOR=1
-export LSCOLORS=ExGxFxdaCxDaDahbadeche
+#export LSCOLORS=ExGxFxdaCxDaDahbadeche
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export HISTTIMEFORMAT='%F %T '
 
 alias ll="ls -al"
 alias macOS="screenfetch"
@@ -12,3 +14,8 @@ alias python="/usr/local/bin/python3"
 alias pip="/usr/local/bin/pip3"
 #jupyter
 alias jupyter_notebook="jupyter notebook"
+
+#zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/opt/zsh-git-prompt/zshrc.sh
