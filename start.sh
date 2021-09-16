@@ -3,23 +3,23 @@
 
 installBrew(){
     echo "安装Homebrew !"
-    echo `/bin/zsh -c " $( curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh ) "`
-    echo `brew update && brew upgrade && brew cleanup`
+    /bin/zsh -c " $( curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh ) "
+    brew update && brew upgrade && brew cleanup
 }
 
 installPy_Ju(){
-    echo `brew install python`
-    echo `pip3 install jupyter`
+    brew install python
+    pip3 install jupyter
 }
 
 zshrc(){
-    echo `touch ~/.zshrc`
+    touch ~/.zshrc
     cp -a ./zsh/zshrc.txt ~/.zshrc
-    echo `source .zshrc`
+    source .zshrc
 }
 
 Vim(){
-    echo `touch ~/.vimrc`
+    touch ~/.vimrc
     cp -a ./vim/vimrc.txt ~/.vimrc
 }
 
