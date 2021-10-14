@@ -11,11 +11,13 @@ alias unrar="unrar x"
 alias rar="rar a"
 
 #python
-alias python="/usr/local/bin/python3"
+alias python="/usr/bin/python3"
 #pip
-alias pip="/usr/local/bin/pip3"
+alias pip="/usr/bin/pip3"
 #jupyter
-alias jupyter_notebook="jupyter notebook"
+alias jupyter_notebook="/Users/aeiou/Library/Python/3.8/bin/jupyter-notebook"
+#ipython
+alias ipython="/Users/aeiou/Library/Python/3.8/bin/ipython"
 
 #zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
