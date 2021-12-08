@@ -14,13 +14,13 @@ installPy_Ju(){
 
 zshrc(){
     touch ~/.zshrc
-    cp -a ./zsh/zshrc.txt ~/.zshrc
+    cp -a ./zsh/zshrc ~/.zshrc
     source .zshrc
 }
 
 Vim(){
     touch ~/.vimrc
-    cp -a ./vim/vimrc.txt ~/.vimrc
+    cp -a ./vim/vimrc ~/.vimrc
 }
 
 read -n 1 -r -p "运行前请确保已经安装Git,如果没有则请自行安装Git再执行,是否运行此脚本?(Y/N):" input
@@ -40,5 +40,6 @@ case $input in
 
     [nN])
         echo "拜拜👋"
-        ;;
+        break
+		;;
 esac

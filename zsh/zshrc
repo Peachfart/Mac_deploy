@@ -2,22 +2,28 @@ export CLICOLOR=1
 #export LSCOLORS=ExGxFxdaCxDaDahbadeche
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export HISTTIMEFORMAT='%F %T '
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+
+#export GOPATH="$HOME/Project/Go"
+#export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 alias ll="ls -al"
-alias macOS="neofetch"
+alias OS="neofetch"
 alias brew-uuc="brew update && brew upgrade && brew cleanup"
 alias brew-delete="rm ~/Library/Caches/Homebrew/downloads/*"
 alias unrar="unrar x"
 alias rar="rar a"
+alias 7z="7zz e"
 
 #python
-alias python="/usr/bin/python3"
+python3="/usr/local/bin/python3"
+alias python="python3"
 #pip
-alias pip="/usr/bin/pip3"
+alias pip="pip3"
 #jupyter
-alias jupyter_notebook="/Users/aeiou/Library/Python/3.8/bin/jupyter-notebook"
-#ipython
-alias ipython="/Users/aeiou/Library/Python/3.8/bin/ipython"
+alias notebook="jupyter-notebook"
 
 #zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -28,3 +34,9 @@ autoload -U colors && colors
 #PS1="%{$fg_bold[red]%}➜"
 PS1="%{$fg_bold[green]%}➜%{$reset_color%} %{$fg[cyan]%}%~ "
 #PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
+#PS1="%{$fg_bold[green]%}%{$reset_color%} %{$fg[cyan]%}%~ "
+#PS1="%{$fg_bold[green]%}➜ %{$reset_color%} %{$fg[cyan]%}%~ "
+
+
+alias aliyun='ssh -N -f -L localhost:1234:localhost:1234 aeiou@112.74.108.206'
+

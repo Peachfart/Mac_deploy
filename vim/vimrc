@@ -15,15 +15,19 @@ filetype indent on
 "自动缩进
 set autoindent
 "tab
-set tabstop=2
+set tabstop=4
 set expandtab
-set softtabstop=2
+set softtabstop=4
+set nu
+set noexpandtab
+set cindent
 "设置行宽
 set textwidth=80
 "自动折行
 set wrap
 "显示状态栏
 set laststatus=2
+set statusline=[WAY=%F%m%r%h%w]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 "显示光标所在位置
 set ruler
 "高亮括号
@@ -42,7 +46,7 @@ set undofile
 set backupdir=~/.vim/.backup//  
 set directory=~/.vim/.swp//
 set undodir=~/.vim/.undo// 
-"出错时不要发出声音和闪烁
+"出错时不要发出声音
 set vb t_vb=
 "词内不折行
 set linebreak
@@ -53,3 +57,10 @@ set autoread
 "命令模式tab补全
 set wildmenu
 set wildmode=longest:list,full
+
+"自动切换目录
+set autochdir
+"允许光标跨越行边界
+set whichwrap+=<,>,h,l
+"打开文件类型检测
+set completeopt=longest,menu
