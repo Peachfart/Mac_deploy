@@ -1,13 +1,16 @@
 export CLICOLOR=1
-#export LSCOLORS=ExGxFxdaCxDaDahbadeche
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export LS_OPTIONS='--color=auto'
+export LSCOLORS='ExGxFxdaCxDaDahbadacex'
 export HISTTIMEFORMAT='%F %T '
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=10000000
 export SAVEHIST=10000000
 
-#export GOPATH="$HOME/Project/Go"
-#export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export HOMEBREW_NO_AUTO_UPDATE=true
+export GOPATH="$HOME/Project/Go"
+export GOPROXY=https://goproxy.cn
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 alias ll="ls -al"
 alias OS="neofetch"
@@ -16,6 +19,7 @@ alias brew-delete="rm ~/Library/Caches/Homebrew/downloads/*"
 alias unrar="unrar x"
 alias rar="rar a"
 alias 7z="7zz e"
+alias 'rm -rf'="rm"
 
 #python
 python3="/usr/local/bin/python3"
@@ -40,3 +44,9 @@ PS1="%{$fg_bold[green]%}➜%{$reset_color%} %{$fg[cyan]%}%~ "
 
 alias aliyun='ssh -N -f -L localhost:1234:localhost:1234 aeiou@112.74.108.206'
 
+
+alias rm=del        #使用别名del代替rm
+del()               #函数del，作用：将rm命令修改为mv命令
+{
+  mv $@ ~/.Trash
+}

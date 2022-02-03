@@ -1,4 +1,3 @@
-"显示行号
 set number
 "语法高亮
 syntax on
@@ -22,7 +21,7 @@ set nu
 set noexpandtab
 set cindent
 "设置行宽
-set textwidth=80
+set textwidth=120
 "自动折行
 set wrap
 "显示状态栏
@@ -64,3 +63,86 @@ set autochdir
 set whichwrap+=<,>,h,l
 "打开文件类型检测
 set completeopt=longest,menu
+
+
+
+
+
+autocmd BufNewFile *.py,*.cpp,*.c,*.sh, exec ":call SetTitle()"                                                                                              
+""定义函数SetTitle，自动插入文件头
+func SetTitle()
+        if &filetype == 'python'
+                call setline(1, "\# _*_ coding: utf-8 _*_")
+                call setline(2, "\"\"\"")
+                call setline(3, "\# Author: Linchun")
+                call setline(4, "\# Created Time : ".strftime("%c"))
+                call setline(5, "")
+                call setline(6, "\# File Name: ".expand("%"))
+                call setline(7, "\# Description:")
+                call setline(8, "")
+                call setline(9, "\"\"\"")
+                call setline(10,"")
+        endif
+        if &filetype == 'c'
+                call setline(1, "//coding=utf-8")
+                call setline(2, "/*************************************************************************")
+                call setline(3, "\ @Author: Linchun")
+                call setline(4, "\ @Created Time : ".strftime("%c"))
+                call setline(5, "")
+                call setline(6, "\ @File Name: ".expand("%"))
+                call setline(7, "\ @Description:")
+                call setline(8, "")
+                call setline(9, " ************************************************************************/")
+                call setline(10,"")
+        endif
+				if &filetype == 'cpp'
+                call setline(1, "//coding=utf8")
+                call setline(2, "/*************************************************************************")
+                call setline(3, "\ @Author: Linchun")
+                call setline(4, "\ @Created Time : ".strftime("%c"))
+                call setline(5, "")
+                call setline(6, "\ @File Name: ".expand("%"))
+                call setline(7, "\ @Description:")
+                call setline(8, "")
+                call setline(9, " ************************************************************************/")
+                call setline(10,"")
+        endif
+				if &filetype == 'sh' 
+								call setline(1,"\#!/bin/zsh") 
+								call setline(2,"\#########################################################################") 
+                call setline(3, "\# @Author: Linchun")
+                call setline(4, "\# @Created Time : ".strftime("%c"))
+                call setline(5, "")
+                call setline(6, "\# @File Name: ".expand("%"))
+                call setline(7, "\# @Description:")
+                call setline(8, "")
+								call setline(9, "\#########################################################################")
+								call setline(10, "")
+				endif
+endfunc
+autocmd BufNewFile * normal G
+
+
+call plug#begin()
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'fatih/vim-go'
+Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
+Plug 'valloric/youcompleteme'
+Plug 'zxqfl/tabnine-vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'mhinz/vim-startify'
+Plug 'chun-yang/auto-pairs'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdcommenter'
+Plug 'kyouryuukunn/completor-necovim'
+Plug 'yggdroot/indentline'
+call plug#end()
+
+colorscheme nord
+filetype plugin on
+
+"Plug 'yggdroot/indentline'
+set list lcs=tab:\¦\ 
+
