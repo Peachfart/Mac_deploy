@@ -10,7 +10,11 @@ export HOMEBREW_NO_AUTO_UPDATE=true
 export GOPATH="$HOME/Project/Go"
 export GOPROXY=https://goproxy.cn
 
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# ruby
+export SDKROOT=$(xcrun --show-sdk-path)
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
+
 
 alias ll="ls -al"
 alias OS="neofetch"
@@ -20,6 +24,9 @@ alias unrar="unrar x"
 alias rar="rar a"
 alias 7z="7zz e"
 alias 'rm -rf'="rm"
+alias uppic="picgo upload"
+alias picls="cat .picgo/picgo.log"
+alias Typora="/Applications/Typora.app/Contents/MacOS/Typora"
 
 #python
 python3="/usr/local/bin/python3"
@@ -32,14 +39,13 @@ alias notebook="jupyter-notebook"
 #zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /usr/local/share/zsh-incr/incr-0.2.zsh
 
-#PS1="➜ [%T] %1~ %#"
+
 autoload -U colors && colors
-#PS1="%{$fg_bold[red]%}➜"
 PS1="%{$fg_bold[green]%}➜%{$reset_color%} %{$fg[cyan]%}%~ "
-#PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
-#PS1="%{$fg_bold[green]%}%{$reset_color%} %{$fg[cyan]%}%~ "
-#PS1="%{$fg_bold[green]%}➜ %{$reset_color%} %{$fg[cyan]%}%~ "
+RPROMPT="%F{23}[%*]%f"
 
 
 alias aliyun='ssh -N -f -L localhost:1234:localhost:1234 aeiou@112.74.108.206'
@@ -50,3 +56,4 @@ del()               #函数del，作用：将rm命令修改为mv命令
 {
   mv $@ ~/.Trash
 }
+

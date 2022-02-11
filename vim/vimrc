@@ -44,7 +44,8 @@ set undofile
 "历史文件路径
 set backupdir=~/.vim/.backup//  
 set directory=~/.vim/.swp//
-set undodir=~/.vim/.undo// 
+set undodir=~/.vim/.undo//
+set viminfo='50,<1000,s100,:0,n~/.vim/.viminfo
 "出错时不要发出声音
 set vb t_vb=
 "词内不折行
