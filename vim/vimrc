@@ -141,9 +141,11 @@ Plug 'kyouryuukunn/completor-necovim'
 Plug 'yggdroot/indentline'
 call plug#end()
 
+
 colorscheme nord
 filetype plugin on
 
 "Plug 'yggdroot/indentline'
 set list lcs=tab:\¦\ 
+
 

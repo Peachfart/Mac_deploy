@@ -24,8 +24,9 @@ alias unrar="unrar x"
 alias rar="rar a"
 alias 7z="7zz e"
 alias 'rm -rf'="rm"
-alias uppic="picgo upload"
-alias picls="cat .picgo/picgo.log"
+# alias uppic="picgo u $@ && cat .picgo/picgo.log | tail -n 6 | grep https | pbcopy"
+alias uppic="picgo u" 
+alias picls="cat ~/.picgo/picgo.log"
 alias Typora="/Applications/Typora.app/Contents/MacOS/Typora"
 
 #python
